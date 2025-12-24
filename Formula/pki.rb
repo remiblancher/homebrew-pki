@@ -5,21 +5,21 @@
 class Pki < Formula
   desc "Quantum-Safe PKI - Certificate Authority toolkit with PQC support"
   homepage "https://github.com/remiblancher/pki"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/remiblancher/pki/releases/download/v0.2.0/pki_0.2.0_darwin_amd64.tar.gz"
-      sha256 "f172d26cda5e0960e20e279d00a51f59141209fc0075fe598b7ef2009aec0536"
+      url "https://github.com/remiblancher/pki/releases/download/v0.3.0/pki_0.3.0_darwin_amd64.tar.gz"
+      sha256 "313e6672bad378b7c938f78a948fca1b756fb36f2b664931a0922d360ba25982"
 
       def install
         bin.install "pki"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/remiblancher/pki/releases/download/v0.2.0/pki_0.2.0_darwin_arm64.tar.gz"
-      sha256 "b2b3db0fa066e119ce3713ca6d0eb904dd3b62c9a7712973c86691c18047c547"
+      url "https://github.com/remiblancher/pki/releases/download/v0.3.0/pki_0.3.0_darwin_arm64.tar.gz"
+      sha256 "8ad8b59d0bbc60f90d04555817cd749664b55dbecde13b38eec6deab5ef741f9"
 
       def install
         bin.install "pki"
@@ -29,15 +29,15 @@ class Pki < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/remiblancher/pki/releases/download/v0.2.0/pki_0.2.0_linux_amd64.tar.gz"
-      sha256 "0969c460178381ca3757d5e796e139978d2674654a01c9644afc63f484d3c35b"
+      url "https://github.com/remiblancher/pki/releases/download/v0.3.0/pki_0.3.0_linux_amd64.tar.gz"
+      sha256 "c48d0e33dbf7a8b3e9b55b853d6f3872e81d791edc525953d49ab3a58b6eb9cd"
       def install
         bin.install "pki"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/remiblancher/pki/releases/download/v0.2.0/pki_0.2.0_linux_arm64.tar.gz"
-      sha256 "bc4066bb622f0ef6bffdf7fe449732f9d299c09f71604063aad8ffa0da20204d"
+      url "https://github.com/remiblancher/pki/releases/download/v0.3.0/pki_0.3.0_linux_arm64.tar.gz"
+      sha256 "d6bf967e4460570fac359f8fd3935e9056b8ebfe126c430787178d4c035fe28b"
       def install
         bin.install "pki"
       end
