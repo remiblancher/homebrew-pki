@@ -11,7 +11,7 @@ class Qpki < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/remiblancher/post-quantum-pki/releases/download/v0.8.0/qpki_0.8.0_darwin_amd64.tar.gz"
-      sha256 "65d8f2912d6fdbb04817166741c02068e8533b4196f60b0a2da3c194c2ecae05"
+      sha256 "ff0875caaf80cab5e728ad5eaae08d3faa57c725c3ec8c8179229319eacc8e4e"
 
       def install
         bin.install "qpki"
@@ -19,7 +19,7 @@ class Qpki < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/remiblancher/post-quantum-pki/releases/download/v0.8.0/qpki_0.8.0_darwin_arm64.tar.gz"
-      sha256 "1656f42a4680fa3f5e81f2ad854d95375e24fe1eb2dec38d9699ae1a45abf335"
+      sha256 "7116ff242d2b0b1faec830d1c76503f0b5e45467d3d9fbcbf7bea86bd12f8f28"
 
       def install
         bin.install "qpki"
@@ -30,14 +30,14 @@ class Qpki < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/remiblancher/post-quantum-pki/releases/download/v0.8.0/qpki_0.8.0_linux_amd64.tar.gz"
-      sha256 "2b4c8dbc36da51c5acdc615df17fead57395b86bc6948f015cc4480e4c839963"
+      sha256 "4e44287463a324bb2ca77cd5e799563a2b4e310ba3e24360223dd3beb4e7086f"
       def install
         bin.install "qpki"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/remiblancher/post-quantum-pki/releases/download/v0.8.0/qpki_0.8.0_linux_arm64.tar.gz"
-      sha256 "cf090348427f789c9d0e898d187d32dbb64c39d3701e2a9199261734186a9b4f"
+      sha256 "f116a8ee3a25424392c9881302be74e351663ec2e4596e8f7062367ee68fa575"
       def install
         bin.install "qpki"
       end
