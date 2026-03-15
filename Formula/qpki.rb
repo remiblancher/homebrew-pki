@@ -5,23 +5,23 @@
 class Qpki < Formula
   desc "Qpki - Certificate Authority toolkit with PQC support"
   homepage "https://github.com/remiblancher/qpki"
-  version "0.16.0"
+  version "0.17.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/remiblancher/qpki/releases/download/v0.16.0/qpki_0.16.0_darwin_amd64.tar.gz"
-      sha256 "d56eb80c1124937295ff904fcca159cbceffe91d0bf8561ae810e8c1c11f6151"
+      url "https://github.com/remiblancher/qpki/releases/download/v0.17.0/qpki_0.17.0_darwin_amd64.tar.gz"
+      sha256 "2d2656aea8251c3425daaae3d0e1430af207bcfbb70930bdffda6e8f673eda3a"
 
-      def install
+      define_method(:install) do
         bin.install "qpki"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/remiblancher/qpki/releases/download/v0.16.0/qpki_0.16.0_darwin_arm64.tar.gz"
-      sha256 "b88aba8f6180a25db6c5d6437991674736772ead476132f698a8a68722fbc60e"
+      url "https://github.com/remiblancher/qpki/releases/download/v0.17.0/qpki_0.17.0_darwin_arm64.tar.gz"
+      sha256 "e3b4ff732b49e58a4332e00120fb055f95617b8492108c707265924fda19b96a"
 
-      def install
+      define_method(:install) do
         bin.install "qpki"
       end
     end
@@ -29,16 +29,16 @@ class Qpki < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/remiblancher/qpki/releases/download/v0.16.0/qpki_0.16.0_linux_amd64.tar.gz"
-      sha256 "c25506c48f76df62ca8ddb84cb7f06f8b7313e990d1ed7230583979de895db79"
-      def install
+      url "https://github.com/remiblancher/qpki/releases/download/v0.17.0/qpki_0.17.0_linux_amd64.tar.gz"
+      sha256 "f6d2115e1b9d4bdab1260f8363f5c4233aeefc7a980e3bec0bfdc1576d07373d"
+      define_method(:install) do
         bin.install "qpki"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/remiblancher/qpki/releases/download/v0.16.0/qpki_0.16.0_linux_arm64.tar.gz"
-      sha256 "65df0fb03b64eee62bbe55e81827d99ce35ccba1e73a924b56c1921b6408bda4"
-      def install
+      url "https://github.com/remiblancher/qpki/releases/download/v0.17.0/qpki_0.17.0_linux_arm64.tar.gz"
+      sha256 "a6449df81933cbdef0774a20bd0842770ec8b93b3d0d02fcd6262538dfd528f5"
+      define_method(:install) do
         bin.install "qpki"
       end
     end
