@@ -5,21 +5,21 @@
 class Qpki < Formula
   desc "Qpki - Certificate Authority toolkit with PQC support"
   homepage "https://github.com/qpki/qpki"
-  version "0.20.9"
+  version "0.21.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qpki/qpki/releases/download/v0.20.9/qpki_0.20.9_darwin_amd64.tar.gz"
-      sha256 "d04b9182b0ec05c76016cddac901b4309718b2168b1e8f06a23e53c67dc9fa3e"
+      url "https://github.com/qpki/qpki/releases/download/v0.21.0/qpki_0.21.0_darwin_amd64.tar.gz"
+      sha256 "d142a9569d5a733903a137e4bd17f89056ade86839013de47f2afe94ede99669"
 
       define_method(:install) do
         bin.install "qpki"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qpki/qpki/releases/download/v0.20.9/qpki_0.20.9_darwin_arm64.tar.gz"
-      sha256 "7a16122a188f09cb704a06aa3016649c0d637740b3972ce232248bd7d59295cd"
+      url "https://github.com/qpki/qpki/releases/download/v0.21.0/qpki_0.21.0_darwin_arm64.tar.gz"
+      sha256 "4031860eb59e423ee86eed1998497884efef7cb21eed007a2aa6f236c9de6244"
 
       define_method(:install) do
         bin.install "qpki"
@@ -29,15 +29,15 @@ class Qpki < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qpki/qpki/releases/download/v0.20.9/qpki_0.20.9_linux_amd64.tar.gz"
-      sha256 "ae566435e2429826c7d546bc1988f52cdc24832b5d36ffc4a1720eef0a238369"
+      url "https://github.com/qpki/qpki/releases/download/v0.21.0/qpki_0.21.0_linux_amd64.tar.gz"
+      sha256 "9b0b14ce596d70871e869e54f6bd7acf265600848125da4b8c75242bc8f340e4"
       define_method(:install) do
         bin.install "qpki"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qpki/qpki/releases/download/v0.20.9/qpki_0.20.9_linux_arm64.tar.gz"
-      sha256 "5350fab9d5f13c83ca435ee9a0a958ccb0ded71edcfd997cb3d5c7bd83481cdd"
+      url "https://github.com/qpki/qpki/releases/download/v0.21.0/qpki_0.21.0_linux_arm64.tar.gz"
+      sha256 "f4667b813424e1df6b7834b576af3bb44ff4b805183bfd1fb5bf4405465f2750"
       define_method(:install) do
         bin.install "qpki"
       end
